@@ -1,0 +1,85 @@
+ethers
+await ethers.transfer()
+await token.code
+await token.address
+await acc1
+(acc1.address).balance
+await (token.address).balance
+await token.balanceOf
+await token.balanceOf(token.address);
+token.balanceOf(token.address);
+await (token.address).transfer(10000000000);
+await token.address.transfer(100000000000);
+await token.totalSupply();
+await token.balanceOf(token.address);
+await token.checkWithdrawBalance();
+await token.transfer(token.address, 500000000);
+await token.balanceOf(addr2.address);
+await token.balanceOf(addr1.address);
+await token.balanceOf(deployer.address);
+await token.transfer(addr2.address, 99000000000000);
+await token.transfer(addr2, 99000000000000);
+await token.balanceOf(addr1.address);
+await token.transfer(addr1.address, 999999999995);
+await token.balanceOf(deployer.address);
+await token.transfer(addr1.address, 5);
+developer.address
+const token = await Token.deploy();
+const Token = await ethers.getContractFactory("Token", {libraries: {IterableMapping: itMap.address}});
+const itMap = await itMapsLib.deploy();
+const itMapsLib = await ethers.getContractFactory("IterableMapping");
+const [deployer, addr1, addr2, addr3] = await ethers.getSigners();
+  });
+    }
+        IterableMapping: itMap.address
+    libraries: {
+const Token = await ethers.getContractFactory("Token", {
+const itMapsLib = await ethers.geconst itMap = await itMapsLib.deploy();
+const [deployer, addr1, addr2, addr3] = await ethers.getSigners();
+await token.balanceOf(deployer.address);
+await token.balanceOf(addr1.address);
+await token.transfer(addr1.address, 5);
+await token.decimals();
+await token.balanceOf(addr1.address);
+await token.transfer(addr1.address, 5e18);
+await token.transfer(addr1.address, 5 ether);
+await token.balanceOf(deployer.address);
+await token.balanceOf(addr1.address);
+await token.transfer(addr1.address, 5);
+await token.balanceOf(deployer.address);
+await token.totalSupply();
+awit token.totalSupply();
+await token
+await token.balanceOf();
+    console.log("Token address:", token.address);
+    const token = await Token.deploy();
+      });
+        }
+            IterableMapping: itMap.address
+        libraries: {
+    const Token = await ethers.getContractFactory("Token", {
+    const itMap = await itMapsLib.deploy();
+    const itMapsLib = await ethers.getContractFactory("IterableMapping");
+    console.log("Account balance:", (await deployer.getBalance()).toString());
+    console.log("Deploying  
+    const [deployer, addr1, addr2, addr3] = await ethers.getSigners();
+token.balanceOf();
+awit token
+await token.balanceOf();
+    console.log("Token address:", token.address);
+    const token = await Token.deploy();
+      });
+        }
+            IterableMapping: itMap.address
+        libraries: {
+    const Token = await ethers.getContractFactory("Token", {
+    const itMap = await itMapsLib.deploy();
+    const itMapsLib = await ethers.getContractFactory("IterableMapping");
+    console.log("Account balance:", (await deployer.getBalance()).toString());
+const [deployer] = await ethers.getSigners();
+await run scripts/deploy.js
+import "./itMaps.sol";
+const Token = await ethers.getContractFactory("Token");
+const token = await Token.deploy();
+const [owner, addr1, addr2, addr3] = await ethers.getSigners();
+const Token = await ethers.getContractFactory("Token");
