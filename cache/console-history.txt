@@ -1,3 +1,21 @@
+impersonatedSigner
+impersonatedSigner.provider.connection = "https://eth-goerli.alchemyapi.io/v2/eo788akRJSIdQe_SEURhwLlgnWl3WQhR";
+impersonatedSigner.connection.url = "https://eth-goerli.alchemyapi.io/v2/eo788akRJSIdQe_SEURhwLlgnWl3WQhR";
+await impersonatedSigner.connection.url = "https://eth-goerli.alchemyapi.io/v2/eo788akRJSIdQe_SEURhwLlgnWl3WQhR";
+impersonatedSigner
+const impersonatedSigner = await ethers.getSigner(address);
+await helpers.impersonateAccount(address);
+const address = "0x98aC4b4eB4Ba661da7d3F575E51398498115Acf9";
+const helpers = require("@nomicfoundation/hardhat-network-helpers");
+const acc = await hre.config.networks.goerli.accounts[0];
+const acc1 = await hre.config.networks.goerli.accounts[0];
+const acc1 = await hre.config.networks.goerli.accounts();
+goerli
+qoerli
+const token = 0x9050953dE588C11d31966Eed08311438A1C0A4eB
+hre.config.networks.goerli
+hre.network
+await hre.network(goerli)
 ethers
 await ethers.transfer()
 await token.code

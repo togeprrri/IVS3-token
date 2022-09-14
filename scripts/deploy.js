@@ -6,15 +6,12 @@ async function main() {
     console.log("Deploying contracts with the account:", deployer.address);
   
     console.log("Account balance:", (await deployer.getBalance()).toString());
-
-    const itMapsLib = await ethers.getContractFactory("IterableMapping");
-    const itMap = await itMapsLib.deploy();
   
     const Token = await ethers.getContractFactory("Token", {
         libraries: {
-            IterableMapping: itMap.address
+            IterableMapping: "0x4aD4E3154EBaFC8df3b03B55359baA4d218B6eA5"
         }
-      });
+    });
 
     const token = await Token.deploy();
   
