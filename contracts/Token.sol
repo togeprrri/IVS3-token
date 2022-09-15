@@ -7,20 +7,17 @@ import "./itMaps.sol";
 contract Token{
     using IterableMapping for IterableMapping.Map;
 
-    uint256 _totalTokens;
-    address[] public owners;
+    uint256 private _totalTokens;
+    mapping(address => bool) private owners;
     uint256 public ownersCount;
-    //mapping(address => uint256) balances;
-    IterableMapping.Map balances;
-    //IterableMapping.Map withdrawBalances;
-    mapping(address => uint256) withdrawBalances;
-    string _name = "Fourth Ivasiuk Token";
-    string _symbol = "IVS3";
+    IterableMapping.Map private balances;
+    mapping(address => uint256) private withdrawBalances;
+    string private _name = "Fourth Ivasiuk Token";
+    string private _symbol = "IVS3";
     address public candidate;
     bool public voting;
-    mapping(address => bool) ownersVotes;
-    uint256 votesCountFor;
-    uint256 votesCountAgainst;
+    uint256 private votesCountFor;
+    uint256 private votesCountAgainst;
 
     event Transfer(address indexed from, address indexed to, uint256 amount);
 
@@ -56,21 +53,13 @@ contract Token{
     }
 
     modifier onlyOwner() {
-        bool flag;
-        for(uint256 i = 0; i < ownersCount; i++){
-            if(msg.sender == owners[i]){
-                flag = true;
-                break;
-            }
-        }
-        require(flag == true, "Not and owner");
+        require(owners[msg.sender], "Not and owner");
         _;
     }
 
     constructor(){
-        owners.push(msg.sender);
+        owners[msg.sender] = true;
         ownersCount++;
-        ownersVotes[msg.sender] = false;
         mint(20 ether, msg.sender);
     }
 
@@ -94,8 +83,7 @@ contract Token{
 
     function vote(bool _choose) external onlyOwner {
         require(voting == true, "Voting isn't started");
-        require(ownersVotes[msg.sender] == false, "This owner voted");
-        ownersVotes[msg.sender] = true;
+
         if(_choose == true){
             votesCountFor++;
         }
@@ -105,16 +93,13 @@ contract Token{
             
         if(votesCountFor > ownersCount/2 || votesCountAgainst > ownersCount/2){
             if(votesCountFor > ownersCount/2){
-                owners.push(candidate);
+                owners[candidate] = true;
                 ownersCount++;
             }
             candidate = address(0);
             voting = false;
             votesCountFor = 0;
             votesCountAgainst = 0;
-            for(uint256 i=0; i<owners.length; i++){
-                ownersVotes[owners[i]] = false;
-            }
         }
     }
 
