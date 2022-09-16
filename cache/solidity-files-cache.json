@@ -37,8 +37,8 @@
       ]
     },
     "D:\\it\\bc\\foutrhToken\\contracts\\Token.sol": {
-      "lastModificationDate": 1663239585467,
-      "contentHash": "519678e016d5b71b7b2b57288a494ea3",
+      "lastModificationDate": 1663322148261,
+      "contentHash": "49dc320709dd6550347784dfb94e411a",
       "sourceName": "contracts/Token.sol",
       "solcConfig": {
         "version": "0.8.13",

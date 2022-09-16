@@ -126,4 +126,8 @@ contract Token{
     function getHolderByIndex(uint256 _index) external view returns(address){
         return balances.getKeyAtIndex(_index);
     }
+
+    function holdersCount() external view returns(uint256){
+        return balances.size();
+    }
 }
