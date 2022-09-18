@@ -1,3 +1,69 @@
+await tk.mint(1e18, "0x72A3B767d845Daf1d1a33e11a389c227015E8d65");
+await tk.mint(1000000000000000, "0x72A3B767d845Daf1d1a33e11a389c227015E8d65");
+await tk.mint(100000000000000, "0x72A3B767d845Daf1d1a33e11a389c227015E8d65");
+await tk.mint(10000000000000, "0x72A3B767d845Daf1d1a33e11a389c227015E8d65");
+await tk.mint(1000000000000, "0x72A3B767d845Daf1d1a33e11a389c227015E8d65");
+await tk.mint(10000000000000000, "0x72A3B767d845Daf1d1a33e11a389c227015E8d65");
+await tk.mint(100000000000000000000, "0x72A3B767d845Daf1d1a33e11a389c227015E8d65");
+await tk.mint(100, "0x72A3B767d845Daf1d1a33e11a389c227015E8d65");
+const tk = await Token.attach("0x315756BA3241255EAe134d126077E5326E4a95Bd");
+});
+        }
+            IterableMapping: "0x4aD4E3154EBaFC8df3b03B55359baA4d218B6eA5"
+        libraries: {
+const Token = await ethers.getContractFactory("Token", {
+const [deployer, a1, a2, a3, a4] = await ethers.getSigners();
+.editor
+await tk.connect("0x630caaE586127F68d3921dEc4Ae225980a09FDD9").approve("0x630caaE586127F68d3921dEc4Ae225980a09FDD9", 100);
+await tk.allowance("0x630caaE586127F68d3921dEc4Ae225980a09FDD9", "0x630caaE586127F68d3921dEc4Ae225980a09FDD9");
+await tk.allowance(0x630caaE586127F68d3921dEc4Ae225980a09FDD9, 0x630caaE586127F68d3921dEc4Ae225980a09FDD9);
+const tk = await Token.attach("0x315756BA3241255EAe134d126077E5326E4a95Bd");
+});
+        }
+            IterableMapping: "0x4aD4E3154EBaFC8df3b03B55359baA4d218B6eA5"
+        libraries: {
+const Token = await ethers.getContractFactory("Token", {
+const [deployer, a1, a2, a3, a4] = await ethers.getSigners();
+.editor
+const tk = await Token.attach("0x315756BA3241255EAe134d126077E5326E4a95Bd");
+});
+        }
+            IterableMapping: "0x4aD4E3154EBaFC8df3b03B55359baA4d218B6eA5"
+        libraries: {
+const Token = await ethers.getContractFactory("Token", {
+const [deployer, a1, a2, a3, a4] = await ethers.getSigners();
+.editor
+.break
+.help
+const tk = await MultiSigToken.attach("0x315756BA3241255EAe134d126077E5326E4a95Bd");
+});
+        }
+            IterableMapping: "0x4aD4E3154EBaFC8df3b03B55359baA4d218B6eA5"
+        libraries: {
+const Token = await ethers.getContractFactory("Token", {
+const [deployer, a1, a2, a3, a4] = await ethers.getSigners();
+.editor
+const tk = await MultiSigToken.attach("0x315756BA3241255EAe134d126077E5326E4a95Bd");
+});
+        }
+            IterableMapping: "0x4aD4E3154EBaFC8df3b03B55359baA4d218B6eA5"
+        libraries: {
+const Token = await ethers.getContractFactory("Token", {
+const [deployer, a1, a2, a3, a4] = await ethers.getSigners();
+.editor
+.clear
+const tk = await MultiSigToken.attach("0x315756BA3241255EAe134d126077E5326E4a95Bd");
+        });
+            IterableMapping: "0x4aD4E3154EBaFC8df3b03B55359baA4d218B6eA5"
+        libraries: {
+const Token = await ethers.getContractFactory("Token", {
+const [deployer, a1, a2, a3, a4] = await ethers.getSigners();
+.editor
+.clear
+const tk = await MultiSigToken.attach("0x315756BA3241255EAe134d126077E5326E4a95Bd");
+const Token = await ethers.getContractFactory("Token");
+const [deployer, a1, a2, a3, a4] = await ethers.getSigners();
+.editor
 impersonatedSigner
 impersonatedSigner.provider.connection = "https://eth-goerli.alchemyapi.io/v2/eo788akRJSIdQe_SEURhwLlgnWl3WQhR";
 impersonatedSigner.connection.url = "https://eth-goerli.alchemyapi.io/v2/eo788akRJSIdQe_SEURhwLlgnWl3WQhR";

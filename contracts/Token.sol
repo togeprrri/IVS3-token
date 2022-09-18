@@ -17,6 +17,7 @@ contract Token{
 
     string private _name = "Fourth Ivasiuk Token";
     string private _symbol = "IVS3";
+    uint8 private _decimals = 18;
 
     address public candidate;
     bool public voting;
@@ -35,8 +36,8 @@ contract Token{
         return _symbol;
     }
 
-    function decimals() external pure returns(uint256){
-        return 18;
+    function decimals() external view returns(uint256){
+        return _decimals;
     }
 
     function totalSupply() external view returns(uint256){
@@ -66,7 +67,7 @@ contract Token{
     constructor(){
         owners[msg.sender] = true;
         ownersCount++;
-        mint(20 ether, msg.sender);
+        mint(20, msg.sender);
     }
 
     function allowance(address _owner, address _spender) external view returns(uint256){
@@ -77,16 +78,16 @@ contract Token{
         allowances[msg.sender][_spender] = _amount;
     }
 
-    function mint(uint amount, address _to) public onlyOwner {
-        balances.set(_to, balances.get(_to) + amount);
-        _totalTokens += amount;
-        emit Transfer(address(0), _to, amount);
+    function mint(uint256 tokenAmount, address _to) public onlyOwner {
+        balances.set(_to, balances.get(_to) + tokenAmount*(10**_decimals));
+        _totalTokens += tokenAmount*(10**_decimals);
+        emit Transfer(address(0), _to, tokenAmount*(10**_decimals));
     }
 
     function transferFrom(address sender, address recepient, uint256 amount) public enoughTokens(sender, amount){
         require(allowances[sender][msg.sender] >= amount, "You can't transfer this amount of tokens");
         allowances[sender][msg.sender] -= amount;
-        
+
         balances.set(sender, balances.get(sender) - amount);
         balances.set(recepient, balances.get(recepient) + amount);
         emit Transfer(sender, recepient, amount);
