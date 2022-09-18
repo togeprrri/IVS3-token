@@ -8,16 +8,22 @@ contract Token{
     using IterableMapping for IterableMapping.Map;
 
     uint256 private _totalTokens;
+
     mapping(address => bool) private owners;
     uint256 public ownersCount;
+
     IterableMapping.Map private balances;
     mapping(address => uint256) private withdrawBalances;
+
     string private _name = "Fourth Ivasiuk Token";
     string private _symbol = "IVS3";
+
     address public candidate;
     bool public voting;
     uint256 private votesCountFor;
     uint256 private votesCountAgainst;
+
+    mapping(address => mapping(address => uint256)) allowances;
 
     event Transfer(address indexed from, address indexed to, uint256 amount);
 
@@ -63,6 +69,14 @@ contract Token{
         mint(20 ether, msg.sender);
     }
 
+    function allowance(address _owner, address _spender) external view returns(uint256){
+        return allowances[_owner][_spender];
+    }
+
+    function approve(address _spender, uint256 _amount) external{
+        allowances[msg.sender][_spender] = _amount;
+    }
+
     function mint(uint amount, address _to) public onlyOwner {
         balances.set(_to, balances.get(_to) + amount);
         _totalTokens += amount;
@@ -70,6 +84,9 @@ contract Token{
     }
 
     function transferFrom(address sender, address recepient, uint256 amount) public enoughTokens(sender, amount){
+        require(allowances[sender][msg.sender] >= amount, "You can't transfer this amount of tokens");
+        allowances[sender][msg.sender] -= amount;
+        
         balances.set(sender, balances.get(sender) - amount);
         balances.set(recepient, balances.get(recepient) + amount);
         emit Transfer(sender, recepient, amount);
